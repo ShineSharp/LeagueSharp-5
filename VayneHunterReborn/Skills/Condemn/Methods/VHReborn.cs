@@ -23,7 +23,7 @@ namespace VayneHunter_Reborn.Skills.Condemn.Methods
 
             foreach (var target in HeroManager.Enemies.Where(h => h.IsValidTarget(Variables.spells[SpellSlot.E].Range) && !h.HasBuffOfType(BuffType.SpellShield) && !h.HasBuffOfType(BuffType.SpellImmunity)))
             {
-                var targetPosition = Variables.spells[SpellSlot.E].GetSPrediction(target).UnitPosition.To3D();
+                var targetPosition = Variables.spells[SpellSlot.E].GetSPrediction(target).UnitPosition.To3D2();
                 var finalPosition = targetPosition.Extend(fromPosition, -pushDistance);
                 var numberOfChecks = (float)Math.Ceiling(pushDistance / 30f);
 

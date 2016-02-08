@@ -16,7 +16,7 @@ namespace VayneHunter_Reborn.Skills.Condemn.Methods
             foreach (var target in HeroManager.Enemies.Where(h => h.IsValidTarget(Variables.spells[SpellSlot.E].Range)))
             {
                 var pushDistance = MenuExtensions.GetItemValue<Slider>("dz191.vhr.misc.condemn.pushdistance").Value;
-                var targetPosition = Variables.spells[SpellSlot.E].GetSPrediction(target).UnitPosition.To3D();
+                var targetPosition = Variables.spells[SpellSlot.E].GetSPrediction(target).UnitPosition.To3D2();
                 var pushDirection = (targetPosition - ObjectManager.Player.ServerPosition).Normalized();
                 float checkDistance = pushDistance / 40f;
                 for (int i = 0; i < 40; i++)

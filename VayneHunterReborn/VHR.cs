@@ -17,7 +17,7 @@ namespace VayneHunter_Reborn
         {
             TumbleLogic.OnLoad();
             CondemnLogic.OnLoad();
-
+            
             foreach (var module in Variables.moduleList)
             {
                 module.OnLoad();
